@@ -1,0 +1,9 @@
+results/electric_vs_nuclear/excluded.csv
+rows=502
+cols=6
+propulsion
+mission
+agent
+cost_model
+rule
+reason

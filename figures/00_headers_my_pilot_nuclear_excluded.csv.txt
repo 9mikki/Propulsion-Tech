@@ -1,0 +1,9 @@
+results/my_pilot_nuclear/excluded.csv
+rows=23
+cols=6
+propulsion
+mission
+agent
+cost_model
+rule
+reason

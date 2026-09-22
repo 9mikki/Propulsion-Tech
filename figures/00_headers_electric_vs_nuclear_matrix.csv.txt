@@ -1,0 +1,14 @@
+results/electric_vs_nuclear/matrix.csv
+rows=5584
+cols=11
+run_id
+sweep
+agent
+propulsion
+mission
+cost_model
+seed
+pairing
+family
+train_steps_requested
+eval_episodes

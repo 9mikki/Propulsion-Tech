@@ -1,0 +1,15 @@
+family,propulsion,mission,sweep,n
+electric,hall_hermes,earth_mars_cargo,electric_vs_nuclear,16
+electric,hall_hermes,leo_geo_transfer,my_pilot,48
+electric,hall_spt100,leo_geo_transfer,my_pilot,48
+electric,hall_spt100,leo_geo_transfer,smoke,9
+electric,ion_next,leo_geo_transfer,my_pilot,48
+electric,ion_nstar,leo_geo_transfer,my_pilot,48
+electric,hall_hermes,mars_crew_fast,my_pilot_nuclear,40
+electric,ion_next,mars_crew_fast,my_pilot_nuclear,40
+nuclear,nep_kilopower,leo_geo_transfer,my_pilot,48
+nuclear,nep_kilopower,leo_geo_transfer,smoke,9
+nuclear,ntp_pewee,leo_geo_transfer,smoke,9
+nuclear,nep_brayton,mars_crew_fast,my_pilot_nuclear,40
+nuclear,ntp_nerva,mars_crew_fast,my_pilot_nuclear,40
+nuclear,ntp_pewee,mars_crew_fast,my_pilot_nuclear,40
