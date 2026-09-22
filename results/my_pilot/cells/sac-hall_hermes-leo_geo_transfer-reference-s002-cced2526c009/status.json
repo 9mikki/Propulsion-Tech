@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "run_id": "cced2526c009",
+  "finished": 1790053889.5659068,
+  "final_val": {
+    "env_step": 5000,
+    "wall_s": 47.156966124000064,
+    "val_return": -0.10109134298521667,
+    "val_success_rate": 0.0,
+    "val_progress": 0.0032886734431131583,
+    "val_constraint_cost": 0.0,
+    "val_selection_value": -0.10109134298521667,
+    "norm_synced": true,
+    "is_best": false
+  }
+}

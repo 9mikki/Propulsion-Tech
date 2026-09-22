@@ -1,0 +1,17 @@
+{
+  "protocol": 3,
+  "propulsion": "hall_hermes",
+  "mission": "earth_mars_cargo",
+  "agent": "bang_bang",
+  "cost_model": "reference",
+  "seed": 5,
+  "train_steps": 300000,
+  "eval_episodes": 20,
+  "val_episodes": 8,
+  "eval_interval": 20000,
+  "agent_kwargs": {},
+  "env_config": {
+    "max_episode_steps": 20000
+  },
+  "slug": "bang_bang-hall_hermes-earth_mars_cargo-reference-s005-22059119365d"
+}

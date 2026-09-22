@@ -1,0 +1,35 @@
+name: my_pilot_nuclear
+description: >
+  Pilot-scale comparison of nuclear-thermal and nuclear-electric systems
+  on the fast crewed Mars mission.
+
+propulsion: all
+
+missions:
+  - mars_crew_fast
+
+agents:
+  - random
+  - max_thrust
+  - prograde
+  - edelbaum
+  - ppo
+  - sac
+
+cost_models:
+  - reference
+
+seeds: 8
+train_steps: 50000
+eval_interval: 5000
+val_episodes: 3
+eval_episodes: 4
+
+report_policy: best
+selection_metric: return
+
+env: {}
+
+results_dir: results
+workers: 4
+save_telemetry: true

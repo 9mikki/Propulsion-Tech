@@ -1,0 +1,59 @@
+{
+  "name": "electric_vs_nuclear",
+  "description": "The headline comparison. All registered agents against all registered propulsion systems across all four missions, at budgets large enough for the learning methods to be represented fairly, with eight seeds so the paired tests have power.\n",
+  "propulsion": "all",
+  "missions": "all",
+  "agents": "all",
+  "cost_models": [
+    "reference",
+    "conservative"
+  ],
+  "seeds": 8,
+  "train_steps": 300000,
+  "eval_episodes": 20,
+  "val_episodes": 8,
+  "eval_interval": 20000,
+  "per_agent": {
+    "cem_mpc": {
+      "val_episodes": 4
+    },
+    "cmaes": {
+      "eval_interval": 50000
+    }
+  },
+  "agent_kwargs": {
+    "ppo": {
+      "lr": 0.0003,
+      "n_steps": 2048,
+      "gamma": 0.995
+    },
+    "lagrangian_ppo": {
+      "lr": 0.0003,
+      "n_steps": 2048,
+      "gamma": 0.995,
+      "cost_limit": 0.0
+    },
+    "sac": {
+      "lr": 0.0003,
+      "batch_size": 256,
+      "gamma": 0.995
+    },
+    "td3": {
+      "lr": 0.0003,
+      "batch_size": 256,
+      "gamma": 0.995
+    }
+  },
+  "env": {
+    "max_episode_steps": 20000
+  },
+  "exclude": [],
+  "include_only": [],
+  "allow_implausible": false,
+  "report_policy": "best",
+  "selection_metric": "return",
+  "results_dir": "results",
+  "workers": 8,
+  "save_telemetry": true,
+  "source": "configs/electric_vs_nuclear.yaml"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "run_id": "12d0f0c9d6e2",
+  "finished": 1790079148.5659695,
+  "final_val": {
+    "env_step": 50000,
+    "wall_s": 464.53312178099804,
+    "val_return": -266.6666666665943,
+    "val_success_rate": 0.0,
+    "val_progress": 4.0560147832972384e-14,
+    "val_constraint_cost": 0.0,
+    "val_selection_value": -266.6666666665943,
+    "norm_synced": true,
+    "is_best": false
+  }
+}

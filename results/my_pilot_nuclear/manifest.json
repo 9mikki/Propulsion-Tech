@@ -1,0 +1,197 @@
+{
+  "sweep": "my_pilot_nuclear",
+  "protocol_version": 3,
+  "finished": 1790079167.1130111,
+  "wall_s": 5741.241582855997,
+  "n_cells": 200,
+  "n_rows": 200,
+  "n_cached": 25,
+  "n_failed": 0,
+  "workers": 4,
+  "report_policy": "best",
+  "selection_metric": "return",
+  "seed_bands": {
+    "train": [
+      0,
+      400000000
+    ],
+    "val": [
+      700000000,
+      800000000
+    ],
+    "test": [
+      900000000,
+      1000000000
+    ]
+  },
+  "platform": {
+    "python": "3.12.3",
+    "system": "Linux",
+    "machine": "x86_64",
+    "numpy": "2.4.4",
+    "torch": "2.14.0+cu130"
+  },
+  "excluded_pairings": [
+    {
+      "propulsion": "hall_hermes",
+      "mission": "mars_crew_fast",
+      "agent": "edelbaum",
+      "rule": "edelbaum_is_planetocentric",
+      "reason": "Edelbaum's law is a closed-form circle-to-circle combined plane-change steering law for a planetocentric low-thrust spiral. Applied to a heliocentric transfer it is not a weak baseline, it is the wrong equation, and a broken baseline inflates every RL win measured against it."
+    },
+    {
+      "propulsion": "hall_spt100",
+      "mission": "mars_crew_fast",
+      "agent": "random",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "hall_spt100",
+      "mission": "mars_crew_fast",
+      "agent": "max_thrust",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "hall_spt100",
+      "mission": "mars_crew_fast",
+      "agent": "prograde",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "hall_spt100",
+      "mission": "mars_crew_fast",
+      "agent": "edelbaum",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "hall_spt100",
+      "mission": "mars_crew_fast",
+      "agent": "ppo",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "hall_spt100",
+      "mission": "mars_crew_fast",
+      "agent": "sac",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "ion_next",
+      "mission": "mars_crew_fast",
+      "agent": "edelbaum",
+      "rule": "edelbaum_is_planetocentric",
+      "reason": "Edelbaum's law is a closed-form circle-to-circle combined plane-change steering law for a planetocentric low-thrust spiral. Applied to a heliocentric transfer it is not a weak baseline, it is the wrong equation, and a broken baseline inflates every RL win measured against it."
+    },
+    {
+      "propulsion": "ion_nstar",
+      "mission": "mars_crew_fast",
+      "agent": "random",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "ion_nstar",
+      "mission": "mars_crew_fast",
+      "agent": "max_thrust",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "ion_nstar",
+      "mission": "mars_crew_fast",
+      "agent": "prograde",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "ion_nstar",
+      "mission": "mars_crew_fast",
+      "agent": "edelbaum",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "ion_nstar",
+      "mission": "mars_crew_fast",
+      "agent": "ppo",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "ion_nstar",
+      "mission": "mars_crew_fast",
+      "agent": "sac",
+      "rule": "underpowered_ep_for_fast_crew",
+      "reason": "SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string smallsat-class thrusters. On a crewed stack they are an order of magnitude worse than the Kilopower case above. The high-power variants of the same technologies (hall_hermes, ion_next) are kept, because there the pairing is at least arguable and that argument is the experiment."
+    },
+    {
+      "propulsion": "nep_brayton",
+      "mission": "mars_crew_fast",
+      "agent": "edelbaum",
+      "rule": "edelbaum_is_planetocentric",
+      "reason": "Edelbaum's law is a closed-form circle-to-circle combined plane-change steering law for a planetocentric low-thrust spiral. Applied to a heliocentric transfer it is not a weak baseline, it is the wrong equation, and a broken baseline inflates every RL win measured against it."
+    },
+    {
+      "propulsion": "nep_kilopower",
+      "mission": "mars_crew_fast",
+      "agent": "random",
+      "rule": "underpowered_nep_for_fast_crew",
+      "reason": "A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the transfer is a multi-year spiral against a mission defined by a <=180-day constraint. Every seed fails for the same trivial reason, which is not a measurement of the controller."
+    },
+    {
+      "propulsion": "nep_kilopower",
+      "mission": "mars_crew_fast",
+      "agent": "max_thrust",
+      "rule": "underpowered_nep_for_fast_crew",
+      "reason": "A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the transfer is a multi-year spiral against a mission defined by a <=180-day constraint. Every seed fails for the same trivial reason, which is not a measurement of the controller."
+    },
+    {
+      "propulsion": "nep_kilopower",
+      "mission": "mars_crew_fast",
+      "agent": "prograde",
+      "rule": "underpowered_nep_for_fast_crew",
+      "reason": "A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the transfer is a multi-year spiral against a mission defined by a <=180-day constraint. Every seed fails for the same trivial reason, which is not a measurement of the controller."
+    },
+    {
+      "propulsion": "nep_kilopower",
+      "mission": "mars_crew_fast",
+      "agent": "edelbaum",
+      "rule": "underpowered_nep_for_fast_crew",
+      "reason": "A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the transfer is a multi-year spiral against a mission defined by a <=180-day constraint. Every seed fails for the same trivial reason, which is not a measurement of the controller."
+    },
+    {
+      "propulsion": "nep_kilopower",
+      "mission": "mars_crew_fast",
+      "agent": "ppo",
+      "rule": "underpowered_nep_for_fast_crew",
+      "reason": "A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the transfer is a multi-year spiral against a mission defined by a <=180-day constraint. Every seed fails for the same trivial reason, which is not a measurement of the controller."
+    },
+    {
+      "propulsion": "nep_kilopower",
+      "mission": "mars_crew_fast",
+      "agent": "sac",
+      "rule": "underpowered_nep_for_fast_crew",
+      "reason": "A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the transfer is a multi-year spiral against a mission defined by a <=180-day constraint. Every seed fails for the same trivial reason, which is not a measurement of the controller."
+    },
+    {
+      "propulsion": "ntp_nerva",
+      "mission": "mars_crew_fast",
+      "agent": "edelbaum",
+      "rule": "edelbaum_is_planetocentric",
+      "reason": "Edelbaum's law is a closed-form circle-to-circle combined plane-change steering law for a planetocentric low-thrust spiral. Applied to a heliocentric transfer it is not a weak baseline, it is the wrong equation, and a broken baseline inflates every RL win measured against it."
+    },
+    {
+      "propulsion": "ntp_pewee",
+      "mission": "mars_crew_fast",
+      "agent": "edelbaum",
+      "rule": "edelbaum_is_planetocentric",
+      "reason": "Edelbaum's law is a closed-form circle-to-circle combined plane-change steering law for a planetocentric low-thrust spiral. Applied to a heliocentric transfer it is not a weak baseline, it is the wrong equation, and a broken baseline inflates every RL win measured against it."
+    }
+  ]
+}

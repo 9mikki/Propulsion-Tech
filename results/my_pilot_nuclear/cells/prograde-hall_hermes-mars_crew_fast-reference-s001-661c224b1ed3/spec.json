@@ -1,0 +1,15 @@
+{
+  "protocol": 3,
+  "propulsion": "hall_hermes",
+  "mission": "mars_crew_fast",
+  "agent": "prograde",
+  "cost_model": "reference",
+  "seed": 1,
+  "train_steps": 50000,
+  "eval_episodes": 4,
+  "val_episodes": 3,
+  "eval_interval": 5000,
+  "agent_kwargs": {},
+  "env_config": {},
+  "slug": "prograde-hall_hermes-mars_crew_fast-reference-s001-661c224b1ed3"
+}

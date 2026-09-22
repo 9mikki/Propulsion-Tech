@@ -1,0 +1,15 @@
+{
+  "protocol": 3,
+  "propulsion": "nep_brayton",
+  "mission": "mars_crew_fast",
+  "agent": "max_thrust",
+  "cost_model": "reference",
+  "seed": 5,
+  "train_steps": 50000,
+  "eval_episodes": 4,
+  "val_episodes": 3,
+  "eval_interval": 5000,
+  "agent_kwargs": {},
+  "env_config": {},
+  "slug": "max_thrust-nep_brayton-mars_crew_fast-reference-s005-885b72bfdb15"
+}

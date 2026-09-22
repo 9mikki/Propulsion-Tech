@@ -1,0 +1,118 @@
+sweep: my_pilot
+cells: 240  (30 configurations x 8 seeds)
+training budget: 4,000,000 env steps
+evaluation episodes: 25,680
+  missions     (1): leo_geo_transfer
+  propulsion   (5): hall_hermes, hall_spt100, ion_next, ion_nstar, nep_kilopower
+  agents       (6): edelbaum, max_thrust, ppo, prograde, random, sac
+  cost_models  (1): reference
+  seeds        (8): 0, 1, 2, 3, 4, 5, 6, 7
+excluded pairings (18):
+  - random@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - random@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - random@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.

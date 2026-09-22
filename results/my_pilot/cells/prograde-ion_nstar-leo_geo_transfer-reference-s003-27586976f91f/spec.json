@@ -1,0 +1,17 @@
+{
+  "protocol": 3,
+  "propulsion": "ion_nstar",
+  "mission": "leo_geo_transfer",
+  "agent": "prograde",
+  "cost_model": "reference",
+  "seed": 3,
+  "train_steps": 50000,
+  "eval_episodes": 4,
+  "val_episodes": 3,
+  "eval_interval": 500,
+  "agent_kwargs": {},
+  "env_config": {
+    "max_episode_steps": 8760
+  },
+  "slug": "prograde-ion_nstar-leo_geo_transfer-reference-s003-27586976f91f"
+}

@@ -1,0 +1,1503 @@
+sweep: electric_vs_nuclear
+cells: 5584  (698 configurations x 8 seeds)
+training budget: 691,200,000 env steps
+evaluation episodes: 380,608
+  missions     (5): earth_mars_cargo, geo_station_keeping, gto_geo_transfer, leo_geo_transfer, mars_crew_fast
+  propulsion   (8): hall_hermes, hall_spt100, ion_next, ion_nstar, nep_brayton, nep_kilopower, ntp_nerva, ntp_pewee
+  agents       (15): bang_bang, cem_mpc, cmaes, edelbaum, gto_transfer, lagrangian_ppo, life_aware, max_isp, max_thrust, pid, ppo, prograde, random, sac, td3
+  cost_models  (2): conservative, reference
+  seeds        (8): 0, 1, 2, 3, 4, 5, 6, 7
+excluded pairings (251):
+  - edelbaum@hall_hermes on earth_mars_cargo  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - edelbaum@hall_spt100 on earth_mars_cargo  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - edelbaum@ion_next on earth_mars_cargo  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - edelbaum@ion_nstar on earth_mars_cargo  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - bang_bang@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cem_mpc@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cmaes@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@nep_brayton on earth_mars_cargo  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - gto_transfer@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - lagrangian_ppo@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - life_aware@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_isp@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - pid@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - random@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - td3@nep_brayton on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@nep_kilopower on earth_mars_cargo  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - bang_bang@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cem_mpc@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cmaes@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@ntp_nerva on earth_mars_cargo  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - gto_transfer@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - lagrangian_ppo@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - life_aware@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_isp@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - pid@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - random@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - td3@ntp_nerva on earth_mars_cargo  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@ntp_pewee on earth_mars_cargo  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - bang_bang@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - cem_mpc@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - cmaes@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - edelbaum@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - gto_transfer@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - lagrangian_ppo@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - life_aware@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - max_isp@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - max_thrust@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - pid@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - ppo@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - prograde@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - random@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - sac@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - td3@nep_brayton on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - bang_bang@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - cem_mpc@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - cmaes@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - edelbaum@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - gto_transfer@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - lagrangian_ppo@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - life_aware@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - max_isp@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - max_thrust@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - pid@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - ppo@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - prograde@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - random@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - sac@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - td3@nep_kilopower on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - bang_bang@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - cem_mpc@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - cmaes@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - edelbaum@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - gto_transfer@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - lagrangian_ppo@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - life_aware@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - max_isp@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - max_thrust@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - pid@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - ppo@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - prograde@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - random@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - sac@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - td3@ntp_nerva on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - bang_bang@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - cem_mpc@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - cmaes@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - edelbaum@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - gto_transfer@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - lagrangian_ppo@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - life_aware@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - max_isp@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - max_thrust@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - pid@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - ppo@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - prograde@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - random@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - sac@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - td3@ntp_pewee on geo_station_keeping  [no_reactor_for_stationkeeping]
+      GEO station keeping is ~50 m/s per year delivered in milli-newton-second
+      impulse bits across a 15-year residence. A fission stage cannot throttle
+      to that impulse bit, its restart budget is order 1e2 rather than 1e5, and
+      reactor disposal practice precludes parking a core in the GEO belt. The
+      cell is a category error, not a hard problem.
+  - bang_bang@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cem_mpc@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cmaes@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - gto_transfer@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - lagrangian_ppo@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - life_aware@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_isp@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - pid@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - random@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - td3@nep_brayton on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - bang_bang@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cem_mpc@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cmaes@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - gto_transfer@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - lagrangian_ppo@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - life_aware@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_isp@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - pid@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - random@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - td3@nep_kilopower on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - bang_bang@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cem_mpc@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cmaes@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - gto_transfer@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - lagrangian_ppo@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - life_aware@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_isp@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - pid@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - random@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - td3@ntp_nerva on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - bang_bang@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cem_mpc@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cmaes@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - gto_transfer@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - lagrangian_ppo@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - life_aware@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_isp@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - pid@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - random@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - td3@ntp_pewee on gto_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - bang_bang@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cem_mpc@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cmaes@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - gto_transfer@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - lagrangian_ppo@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - life_aware@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_isp@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - pid@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - random@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - td3@nep_brayton on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - bang_bang@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cem_mpc@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cmaes@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - gto_transfer@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - lagrangian_ppo@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - life_aware@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_isp@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - pid@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - random@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - td3@ntp_nerva on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - bang_bang@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cem_mpc@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - cmaes@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - gto_transfer@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - lagrangian_ppo@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - life_aware@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_isp@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - max_thrust@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - pid@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - ppo@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - prograde@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - random@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - sac@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - td3@ntp_pewee on leo_geo_transfer  [mass_budget_does_not_close]
+      The propulsion system's own dry mass, charged against the mission's fixed
+      launched wet mass, leaves no useful propellant. The vehicle cannot be
+      built, so no controller can fly it; excluding the cell is the honest
+      alternative to reporting a failure that is structural rather than
+      behavioural. Arithmetic exclusion from each system's bill of materials.
+  - edelbaum@hall_hermes on mars_crew_fast  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - bang_bang@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - cem_mpc@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - cmaes@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - edelbaum@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - gto_transfer@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - lagrangian_ppo@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - life_aware@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - max_isp@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - max_thrust@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - pid@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - ppo@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - prograde@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - random@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - sac@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - td3@hall_spt100 on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - edelbaum@ion_next on mars_crew_fast  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - bang_bang@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - cem_mpc@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - cmaes@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - edelbaum@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - gto_transfer@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - lagrangian_ppo@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - life_aware@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - max_isp@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - max_thrust@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - pid@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - ppo@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - prograde@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - random@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - sac@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - td3@ion_nstar on mars_crew_fast  [underpowered_ep_for_fast_crew]
+      SPT-100 (1.35 kW, 83 mN) and NSTAR (2.3 kW, 92 mN) are single-string
+      smallsat-class thrusters. On a crewed stack they are an order of magnitude
+      worse than the Kilopower case above. The high-power variants of the same
+      technologies (hall_hermes, ion_next) are kept, because there the pairing
+      is at least arguable and that argument is the experiment.
+  - edelbaum@nep_brayton on mars_crew_fast  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - bang_bang@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - cem_mpc@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - cmaes@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - edelbaum@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - gto_transfer@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - lagrangian_ppo@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - life_aware@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - max_isp@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - max_thrust@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - pid@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - ppo@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - prograde@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - random@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - sac@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - td3@nep_kilopower on mars_crew_fast  [underpowered_nep_for_fast_crew]
+      A Kilopower-class NEP stage is ~10 kWe, roughly 0.4 N of thrust. A crewed
+      fast-transfer stack is >=50 t, so acceleration is ~8e-6 m/s^2 and the
+      transfer is a multi-year spiral against a mission defined by a <=180-day
+      constraint. Every seed fails for the same trivial reason, which is not a
+      measurement of the controller.
+  - edelbaum@ntp_nerva on mars_crew_fast  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.
+  - edelbaum@ntp_pewee on mars_crew_fast  [edelbaum_is_planetocentric]
+      Edelbaum's law is a closed-form circle-to-circle combined plane-change
+      steering law for a planetocentric low-thrust spiral. Applied to a
+      heliocentric transfer it is not a weak baseline, it is the wrong equation,
+      and a broken baseline inflates every RL win measured against it.

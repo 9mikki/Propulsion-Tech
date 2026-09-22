@@ -1,0 +1,36 @@
+{
+  "name": "my_pilot_nuclear",
+  "description": "Pilot-scale comparison of nuclear-thermal and nuclear-electric systems on the fast crewed Mars mission.\n",
+  "propulsion": "all",
+  "missions": [
+    "mars_crew_fast"
+  ],
+  "agents": [
+    "random",
+    "max_thrust",
+    "prograde",
+    "edelbaum",
+    "ppo",
+    "sac"
+  ],
+  "cost_models": [
+    "reference"
+  ],
+  "seeds": 8,
+  "train_steps": 50000,
+  "eval_episodes": 4,
+  "val_episodes": 3,
+  "eval_interval": 5000,
+  "per_agent": {},
+  "agent_kwargs": {},
+  "env": {},
+  "exclude": [],
+  "include_only": [],
+  "allow_implausible": false,
+  "report_policy": "best",
+  "selection_metric": "return",
+  "results_dir": "results",
+  "workers": 4,
+  "save_telemetry": true,
+  "source": "configs/my_pilot_nuclear.yaml"
+}

@@ -1,0 +1,15 @@
+{
+  "protocol": 3,
+  "propulsion": "ion_next",
+  "mission": "mars_crew_fast",
+  "agent": "max_thrust",
+  "cost_model": "reference",
+  "seed": 0,
+  "train_steps": 50000,
+  "eval_episodes": 4,
+  "val_episodes": 3,
+  "eval_interval": 5000,
+  "agent_kwargs": {},
+  "env_config": {},
+  "slug": "max_thrust-ion_next-mars_crew_fast-reference-s000-fd298a7bf09f"
+}

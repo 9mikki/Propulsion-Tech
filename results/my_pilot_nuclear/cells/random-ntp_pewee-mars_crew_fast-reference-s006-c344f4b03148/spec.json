@@ -1,0 +1,15 @@
+{
+  "protocol": 3,
+  "propulsion": "ntp_pewee",
+  "mission": "mars_crew_fast",
+  "agent": "random",
+  "cost_model": "reference",
+  "seed": 6,
+  "train_steps": 50000,
+  "eval_episodes": 4,
+  "val_episodes": 3,
+  "eval_interval": 5000,
+  "agent_kwargs": {},
+  "env_config": {},
+  "slug": "random-ntp_pewee-mars_crew_fast-reference-s006-c344f4b03148"
+}
