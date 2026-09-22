@@ -34,5 +34,5 @@
   "results_dir": "results",
   "workers": 1,
   "save_telemetry": true,
-  "source": "/Users/rohitganti/Desktop/Propulsion_RL/configs/smoke.yaml"
+  "source": "/workspace/configs/smoke.yaml"
 }

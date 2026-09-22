@@ -1,11 +1,11 @@
 {
   "sweep": "smoke",
   "protocol_version": 3,
-  "finished": 1788367378.765568,
-  "wall_s": 4.985571249999339,
+  "finished": 1790050807.3216753,
+  "wall_s": 0.0016640279999933227,
   "n_cells": 18,
   "n_rows": 18,
-  "n_cached": 9,
+  "n_cached": 18,
   "n_failed": 0,
   "workers": 1,
   "report_policy": "best",
@@ -25,11 +25,11 @@
     ]
   },
   "platform": {
-    "python": "3.11.8",
-    "system": "Darwin",
-    "machine": "arm64",
-    "numpy": "2.4.6",
-    "torch": "2.14.0"
+    "python": "3.12.3",
+    "system": "Linux",
+    "machine": "x86_64",
+    "numpy": "2.4.4",
+    "torch": "2.14.0+cu130"
   },
   "excluded_pairings": []
 }
