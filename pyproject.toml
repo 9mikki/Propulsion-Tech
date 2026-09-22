@@ -24,7 +24,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-viz = ["matplotlib>=3.7", "seaborn>=0.12"]
+viz = ["matplotlib>=3.7", "seaborn>=0.12", "plotly>=5.18"]
 gym = ["gymnasium>=0.29"]
 sb3 = ["gymnasium>=0.29", "stable-baselines3>=2.2"]
 evo = ["cma>=3.3"]

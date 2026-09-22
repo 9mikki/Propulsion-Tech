@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Propulsion RL — interactive figures</title>
+  <style>
+    body {
+      margin: 0; font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 10% 10%, #FFD6A5, transparent 40%),
+                  radial-gradient(circle at 90% 0%, #CDB4DB, transparent 35%),
+                  radial-gradient(circle at 80% 80%, #A0C4FF, transparent 40%),
+                  #FFF8F0;
+      color: #1B1B3A;
+    }
+    header {
+      padding: 2.2rem 8vw 1rem;
+    }
+    h1 { font-size: 2.4rem; margin: 0 0 0.4rem; }
+    .note { max-width: 52rem; line-height: 1.45; }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.1rem; padding: 0 8vw 3rem;
+    }
+    .card {
+      display: block; text-decoration: none; color: inherit;
+      background: white; border: 3px solid #1B1B3A; border-radius: 18px;
+      padding: 1.1rem 1.2rem; box-shadow: 6px 6px 0 #9B5DE5;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .card:nth-child(2) { box-shadow: 6px 6px 0 #4D96FF; }
+    .card:nth-child(3) { box-shadow: 6px 6px 0 #FF9F1C; }
+    .card:nth-child(4) { box-shadow: 6px 6px 0 #F15BB5; }
+    .card:nth-child(5) { box-shadow: 6px 6px 0 #6BCB77; }
+    .card:nth-child(6) { box-shadow: 6px 6px 0 #FF6B6B; }
+    .card:nth-child(7) { box-shadow: 6px 6px 0 #00BBF9; }
+    .card:hover { transform: translate(-3px, -3px); }
+    h2 { margin: 0 0 0.35rem; font-size: 1.15rem; }
+    p { margin: 0; color: #3D3D6B; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Interactive companion figures</h1>
+    <p class="note">
+      These HTML charts sit beside the original matplotlib PNGs in <code>figures/</code>
+      and do not replace them. Hover a point for the raw seed. Facets are
+      <b>propulsion · mission · sweep</b>, so <code>hall_hermes</code> on
+      <code>earth_mars_cargo</code> (electric_vs_nuclear) stays separate from
+      <code>hall_hermes</code> on <code>mars_crew_fast</code> (my_pilot_nuclear)
+      and <code>leo_geo_transfer</code> (my_pilot). Electric and nuclear y-axes
+      are not shared. No scores or rankings.
+    </p>
+  </header>
+  <div class="grid">
+    
+            <a class="card" href="01_trip_time_days.html">
+              <h2>1. Trip time</h2>
+              <p>Strip plot of every seed. Facet = propulsion · mission · sweep.</p>
+            </a>
+            
+            <a class="card" href="02_termination_reason.html">
+              <h2>2. Termination mix</h2>
+              <p>Stacked seed counts of termination_reason_mode.</p>
+            </a>
+            
+            <a class="card" href="02_termination_sunburst.html">
+              <h2>2b. Termination sunburst</h2>
+              <p>Same outcomes nested family → mission → propulsion → sweep.</p>
+            </a>
+            
+            <a class="card" href="03_wear_fraction.html">
+              <h2>3. Wear fraction</h2>
+              <p>Strip plot of every seed.</p>
+            </a>
+            
+            <a class="card" href="04_constraint_violations.html">
+              <h2>4. Constraint violations</h2>
+              <p>Strip plot of every seed.</p>
+            </a>
+            
+            <a class="card" href="05_experiment_pipeline.html">
+              <h2>5. Pipeline</h2>
+              <p>Colorful methodology diagram, not results.</p>
+            </a>
+            
+            <a class="card" href="06_overview_scatter.html">
+              <h2>6. Overview scatter</h2>
+              <p>Each seed as a point: trip time vs wear, hover for the rest.</p>
+            </a>
+            
+            <a class="card" href="06_overview_table.html">
+              <h2>6b. Overview table</h2>
+              <p>Full raw seed table, filterable in the Plotly bar.</p>
+            </a>
+            
+  </div>
+</body>
+</html>
