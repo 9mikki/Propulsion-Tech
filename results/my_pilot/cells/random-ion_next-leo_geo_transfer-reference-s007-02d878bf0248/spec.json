@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ion_next",
-  "mission": "leo_geo_transfer",
-  "agent": "random",
-  "cost_model": "reference",
-  "seed": 7,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 8760
-  },
-  "slug": "random-ion_next-leo_geo_transfer-reference-s007-02d878bf0248"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ccd60aff9eb3edbaedbea755f38f1a07923dda1c9025ca1865095507804c682
+size 383

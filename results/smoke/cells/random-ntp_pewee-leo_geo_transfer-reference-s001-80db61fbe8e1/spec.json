@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ntp_pewee",
-  "mission": "leo_geo_transfer",
-  "agent": "random",
-  "cost_model": "reference",
-  "seed": 1,
-  "train_steps": 400,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 200,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 60
-  },
-  "slug": "random-ntp_pewee-leo_geo_transfer-reference-s001-80db61fbe8e1"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ab8524045a5ac5f57f38074bd0aaf3a98f264a015520f49eb43f6e45566373a
+size 381

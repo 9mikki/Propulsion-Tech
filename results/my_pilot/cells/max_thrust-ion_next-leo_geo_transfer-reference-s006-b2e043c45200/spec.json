@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ion_next",
-  "mission": "leo_geo_transfer",
-  "agent": "max_thrust",
-  "cost_model": "reference",
-  "seed": 6,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 8760
-  },
-  "slug": "max_thrust-ion_next-leo_geo_transfer-reference-s006-b2e043c45200"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:56cdf0409aa2a4d2a270e3ddac8f65577c01b4c5d41fba10c6003424fa2f3cac
+size 391

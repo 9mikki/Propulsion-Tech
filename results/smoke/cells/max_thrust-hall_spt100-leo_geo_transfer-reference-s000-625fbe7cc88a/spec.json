@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_spt100",
-  "mission": "leo_geo_transfer",
-  "agent": "max_thrust",
-  "cost_model": "reference",
-  "seed": 0,
-  "train_steps": 400,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 200,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 60
-  },
-  "slug": "max_thrust-hall_spt100-leo_geo_transfer-reference-s000-625fbe7cc88a"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:588984039b42d2cc4cd884076ad1837400259752ca99e07b754ef7fcc46e9e2a
+size 393

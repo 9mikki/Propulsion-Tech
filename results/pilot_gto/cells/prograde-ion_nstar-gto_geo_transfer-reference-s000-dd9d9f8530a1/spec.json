@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ion_nstar",
-  "mission": "gto_geo_transfer",
-  "agent": "prograde",
-  "cost_model": "reference",
-  "seed": 0,
-  "train_steps": 40000,
-  "eval_episodes": 2,
-  "val_episodes": 1,
-  "eval_interval": 20000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "prograde-ion_nstar-gto_geo_transfer-reference-s000-dd9d9f8530a1"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:08f9afb81c0bd9870409cc0cd950e8603e4bc451e8f73889ed170fe24fd8198f
+size 358

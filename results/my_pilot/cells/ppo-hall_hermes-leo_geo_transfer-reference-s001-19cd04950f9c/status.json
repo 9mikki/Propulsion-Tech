@@ -1,16 +1,3 @@
-{
-  "status": "ok",
-  "run_id": "19cd04950f9c",
-  "finished": 1790055645.7461596,
-  "final_val": {
-    "env_step": 50000,
-    "wall_s": 166.40756951999992,
-    "val_return": -11.928135031498329,
-    "val_success_rate": 0.0,
-    "val_progress": 0.0024613221085106516,
-    "val_constraint_cost": 0.0,
-    "val_selection_value": -11.928135031498329,
-    "norm_synced": true,
-    "is_best": false
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8d267a01545a9e8853845a16e50eb2fc0c1075d96adc7ec257c6becb4b65ca41
+size 398

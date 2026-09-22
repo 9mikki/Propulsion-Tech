@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ion_nstar",
-  "mission": "leo_geo_transfer",
-  "agent": "ppo",
-  "cost_model": "reference",
-  "seed": 5,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 8760
-  },
-  "slug": "ppo-ion_nstar-leo_geo_transfer-reference-s005-7334c9c1b996"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ca447d27fb8a227e38596a13afd67f3b81663a9c530418683cb37f4d7834dc4e
+size 379

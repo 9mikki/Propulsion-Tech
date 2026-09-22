@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_spt100",
-  "mission": "leo_geo_transfer",
-  "agent": "sac",
-  "cost_model": "reference",
-  "seed": 0,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 8760
-  },
-  "slug": "sac-hall_spt100-leo_geo_transfer-reference-s000-1593cc31419c"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:927e6323e5e0fdec2fdd334001334bea5106d53b9a648e524315a4b9aa67dcf9
+size 383

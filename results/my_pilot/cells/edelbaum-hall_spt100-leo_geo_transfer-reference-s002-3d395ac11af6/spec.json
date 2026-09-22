@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_spt100",
-  "mission": "leo_geo_transfer",
-  "agent": "edelbaum",
-  "cost_model": "reference",
-  "seed": 2,
-  "train_steps": 5000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 300
-  },
-  "slug": "edelbaum-hall_spt100-leo_geo_transfer-reference-s002-3d395ac11af6"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d83823fd5674022cd97dbe26985ee8ce48aa0e56f7019049c8b1f63c8c23e17
+size 391

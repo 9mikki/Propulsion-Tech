@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_hermes",
-  "mission": "leo_geo_transfer",
-  "agent": "sac",
-  "cost_model": "reference",
-  "seed": 0,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 8760
-  },
-  "slug": "sac-hall_hermes-leo_geo_transfer-reference-s000-85a9db304d06"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aae322ca8d942f543e62795eeb0003f6cb1e62e4442b2b6929465c8a6a9d03d4
+size 383

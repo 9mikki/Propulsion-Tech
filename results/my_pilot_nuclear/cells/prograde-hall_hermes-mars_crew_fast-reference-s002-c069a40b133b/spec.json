@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_hermes",
-  "mission": "mars_crew_fast",
-  "agent": "prograde",
-  "cost_model": "reference",
-  "seed": 2,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "prograde-hall_hermes-mars_crew_fast-reference-s002-c069a40b133b"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1001c1cda1e92f463f4915e6be25ad5f385bd66772fbc47e31b55fe8bc07098
+size 357

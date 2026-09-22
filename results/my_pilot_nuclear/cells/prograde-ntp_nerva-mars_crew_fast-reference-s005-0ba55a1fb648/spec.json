@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ntp_nerva",
-  "mission": "mars_crew_fast",
-  "agent": "prograde",
-  "cost_model": "reference",
-  "seed": 5,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "prograde-ntp_nerva-mars_crew_fast-reference-s005-0ba55a1fb648"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec3865b73693001b3f3430fcab3abbdb6a4a78e9fe4cf30928f674ce5db9f671
+size 353

@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_hermes",
-  "mission": "mars_crew_fast",
-  "agent": "random",
-  "cost_model": "reference",
-  "seed": 0,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "random-hall_hermes-mars_crew_fast-reference-s000-a1bfa62c530c"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ec48f0bc579b19950145ac6e45a20b1fe4b408d2dba9ae0352762b39cee458b
+size 353

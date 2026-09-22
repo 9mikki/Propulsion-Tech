@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "nep_kilopower",
-  "mission": "leo_geo_transfer",
-  "agent": "edelbaum",
-  "cost_model": "reference",
-  "seed": 1,
-  "train_steps": 5000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 300
-  },
-  "slug": "edelbaum-nep_kilopower-leo_geo_transfer-reference-s001-697260a36ada"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd3e34d4c68658c47fd7fa010f1ad1749c326e8f6a9c3dffbef96bd9f026414c
+size 395

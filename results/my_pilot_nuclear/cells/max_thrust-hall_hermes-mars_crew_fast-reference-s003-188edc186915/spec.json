@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_hermes",
-  "mission": "mars_crew_fast",
-  "agent": "max_thrust",
-  "cost_model": "reference",
-  "seed": 3,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "max_thrust-hall_hermes-mars_crew_fast-reference-s003-188edc186915"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f43da47478234d4d5521f6a915d2cbf03f9718d42349899fbde6ca3ff2c809c3
+size 361

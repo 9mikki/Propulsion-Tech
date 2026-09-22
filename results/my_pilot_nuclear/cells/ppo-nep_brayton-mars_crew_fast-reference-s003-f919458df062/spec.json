@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "nep_brayton",
-  "mission": "mars_crew_fast",
-  "agent": "ppo",
-  "cost_model": "reference",
-  "seed": 3,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "ppo-nep_brayton-mars_crew_fast-reference-s003-f919458df062"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:74a466307180e9b55cf2de97364f3ec1a4317bc9eefe5e76b02740057ef93796
+size 347

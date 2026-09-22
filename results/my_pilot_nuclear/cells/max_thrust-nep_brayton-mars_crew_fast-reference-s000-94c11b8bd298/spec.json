@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "nep_brayton",
-  "mission": "mars_crew_fast",
-  "agent": "max_thrust",
-  "cost_model": "reference",
-  "seed": 0,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "max_thrust-nep_brayton-mars_crew_fast-reference-s000-94c11b8bd298"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2ae9b6e52a9a7748f130747bb2dbd7403da1c5ef4c45dcd69ca57f04cdeeee2
+size 361

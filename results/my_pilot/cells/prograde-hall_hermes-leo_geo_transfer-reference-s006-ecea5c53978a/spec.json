@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_hermes",
-  "mission": "leo_geo_transfer",
-  "agent": "prograde",
-  "cost_model": "reference",
-  "seed": 6,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 8760
-  },
-  "slug": "prograde-hall_hermes-leo_geo_transfer-reference-s006-ecea5c53978a"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d57f7b923f332afd334aac3092c14ea3269a24496cc17a53bb661b55805d0a70
+size 393

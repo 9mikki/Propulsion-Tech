@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "nep_brayton",
-  "mission": "mars_crew_fast",
-  "agent": "sac",
-  "cost_model": "reference",
-  "seed": 1,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "sac-nep_brayton-mars_crew_fast-reference-s001-add0ee42f072"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dcf49d4819b84fc73e3c6972747af4fcf8de661e7a8a337cb7059aff331e0002
+size 347

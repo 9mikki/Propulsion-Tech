@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "nep_brayton",
-  "mission": "mars_crew_fast",
-  "agent": "prograde",
-  "cost_model": "reference",
-  "seed": 5,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "prograde-nep_brayton-mars_crew_fast-reference-s005-14ebef85e553"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:44fa01153779277e3e5b306db5cacf5de834425cde96008f84d502e0f7b20358
+size 357

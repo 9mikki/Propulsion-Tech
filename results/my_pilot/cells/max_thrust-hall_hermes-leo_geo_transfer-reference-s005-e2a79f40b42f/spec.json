@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_hermes",
-  "mission": "leo_geo_transfer",
-  "agent": "max_thrust",
-  "cost_model": "reference",
-  "seed": 5,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 8760
-  },
-  "slug": "max_thrust-hall_hermes-leo_geo_transfer-reference-s005-e2a79f40b42f"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ce82929953de05153cb9f022b94bc1962f6b09ece00c5aa01b83227c696b3e1
+size 397

@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ion_next",
-  "mission": "mars_crew_fast",
-  "agent": "sac",
-  "cost_model": "reference",
-  "seed": 0,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "sac-ion_next-mars_crew_fast-reference-s000-d881f0b1b741"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6864641233ba3213fda9d59ad89a7573eb040b119d6b8918109ed5436082a8a
+size 341

@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "nep_kilopower",
-  "mission": "leo_geo_transfer",
-  "agent": "sac",
-  "cost_model": "reference",
-  "seed": 2,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 8760
-  },
-  "slug": "sac-nep_kilopower-leo_geo_transfer-reference-s002-0d25eb3200d0"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:72ee4ebd24a61efe136cce558d02f83010e61c109ead7e5cc0814d44b0eb900a
+size 387

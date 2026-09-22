@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_hermes",
-  "mission": "earth_mars_cargo",
-  "agent": "bang_bang",
-  "cost_model": "reference",
-  "seed": 2,
-  "train_steps": 300000,
-  "eval_episodes": 20,
-  "val_episodes": 8,
-  "eval_interval": 20000,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 20000
-  },
-  "slug": "bang_bang-hall_hermes-earth_mars_cargo-reference-s002-a03bdfd466d2"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0a9d1b260e9913c768794fd3cdcf0a883aa9c133e042616370b6ca1eb141878
+size 400

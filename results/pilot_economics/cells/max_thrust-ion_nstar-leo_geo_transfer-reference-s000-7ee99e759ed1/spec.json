@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ion_nstar",
-  "mission": "leo_geo_transfer",
-  "agent": "max_thrust",
-  "cost_model": "reference",
-  "seed": 0,
-  "train_steps": 40000,
-  "eval_episodes": 2,
-  "val_episodes": 1,
-  "eval_interval": 20000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "max_thrust-ion_nstar-leo_geo_transfer-reference-s000-7ee99e759ed1"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:05e959d3761b0ae5c52f6baa82d108241dde290ccee8904d4d9de5f3ffe866d2
+size 362

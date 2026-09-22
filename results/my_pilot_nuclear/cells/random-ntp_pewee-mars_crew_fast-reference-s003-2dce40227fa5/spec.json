@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ntp_pewee",
-  "mission": "mars_crew_fast",
-  "agent": "random",
-  "cost_model": "reference",
-  "seed": 3,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "random-ntp_pewee-mars_crew_fast-reference-s003-2dce40227fa5"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:97577cb800eb3b9f4291889959a67b1593cf9f0615c1c03d6c294eb6dd5245eb
+size 349

@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_hermes",
-  "mission": "leo_geo_transfer",
-  "agent": "edelbaum",
-  "cost_model": "reference",
-  "seed": 0,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 8760
-  },
-  "slug": "edelbaum-hall_hermes-leo_geo_transfer-reference-s000-8c0007de6988"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c23be91acb5621d359d89a770b0eeb3b60ed9e6b7f855fddbd2fdca1aaac56e
+size 393

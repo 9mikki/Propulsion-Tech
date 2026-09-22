@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "nep_kilopower",
-  "mission": "leo_geo_transfer",
-  "agent": "max_thrust",
-  "cost_model": "reference",
-  "seed": 1,
-  "train_steps": 5000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 300
-  },
-  "slug": "max_thrust-nep_kilopower-leo_geo_transfer-reference-s001-aae5bf4491a7"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:41ec5d2c36a88558470de45c066b1e8da6679274de17ffcc339b3b02bd5e5eaf
+size 399

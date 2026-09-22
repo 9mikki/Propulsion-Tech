@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_spt100",
-  "mission": "leo_geo_transfer",
-  "agent": "prograde",
-  "cost_model": "reference",
-  "seed": 0,
-  "train_steps": 40000,
-  "eval_episodes": 2,
-  "val_episodes": 1,
-  "eval_interval": 20000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "prograde-hall_spt100-leo_geo_transfer-reference-s000-de05a7dc9236"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:852b1400b28ac9d2674dec65eae71e6d0e155154e2c2d6a17b48a311aba084a6
+size 362

@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ntp_pewee",
-  "mission": "mars_crew_fast",
-  "agent": "prograde",
-  "cost_model": "reference",
-  "seed": 2,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "prograde-ntp_pewee-mars_crew_fast-reference-s002-e951aa7ac4cf"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:43aec7712f543d9fb5f49e1c1ed0abe07157cfee2826fb924a5fb28042def2e6
+size 353

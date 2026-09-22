@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ntp_nerva",
-  "mission": "mars_crew_fast",
-  "agent": "max_thrust",
-  "cost_model": "reference",
-  "seed": 6,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "max_thrust-ntp_nerva-mars_crew_fast-reference-s006-f8b0d57d44f8"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea955dd0b5690ce00f2eee11cd643e709e5c709bb7aa1d25ba8b0f9b7dddfc58
+size 357

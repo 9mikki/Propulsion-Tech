@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "nep_kilopower",
-  "mission": "leo_geo_transfer",
-  "agent": "prograde",
-  "cost_model": "reference",
-  "seed": 3,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 8760
-  },
-  "slug": "prograde-nep_kilopower-leo_geo_transfer-reference-s003-cd72eda22a2a"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a6d6140e944ced76a8ac1ca5813a338488404da5e0030517d7dd704f003640c
+size 397

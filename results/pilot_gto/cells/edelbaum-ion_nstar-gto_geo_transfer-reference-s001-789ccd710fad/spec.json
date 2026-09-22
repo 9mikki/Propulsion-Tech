@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ion_nstar",
-  "mission": "gto_geo_transfer",
-  "agent": "edelbaum",
-  "cost_model": "reference",
-  "seed": 1,
-  "train_steps": 40000,
-  "eval_episodes": 2,
-  "val_episodes": 1,
-  "eval_interval": 20000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "edelbaum-ion_nstar-gto_geo_transfer-reference-s001-789ccd710fad"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:274f4a6aa7f4166dc4ec0094b9103ed84efa18172ce8abae793188c2b9d7440b
+size 358

@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_hermes",
-  "mission": "leo_geo_transfer",
-  "agent": "random",
-  "cost_model": "reference",
-  "seed": 1,
-  "train_steps": 40000,
-  "eval_episodes": 2,
-  "val_episodes": 1,
-  "eval_interval": 20000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "random-hall_hermes-leo_geo_transfer-reference-s001-5fd9e2057e9a"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:960f6976899e83b9e50873d7d52bc366c81195784de6d19b3c3b8921b32f0799
+size 358

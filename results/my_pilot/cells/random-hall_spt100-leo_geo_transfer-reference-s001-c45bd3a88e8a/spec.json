@@ -1,17 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_spt100",
-  "mission": "leo_geo_transfer",
-  "agent": "random",
-  "cost_model": "reference",
-  "seed": 1,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 500,
-  "agent_kwargs": {},
-  "env_config": {
-    "max_episode_steps": 8760
-  },
-  "slug": "random-hall_spt100-leo_geo_transfer-reference-s001-c45bd3a88e8a"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d30ad02da10b4cf5162baf2e7877e67c089e95d69590baaffeee382a5b625e5
+size 389

@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "ion_nstar",
-  "mission": "gto_geo_transfer",
-  "agent": "random",
-  "cost_model": "reference",
-  "seed": 2,
-  "train_steps": 40000,
-  "eval_episodes": 2,
-  "val_episodes": 1,
-  "eval_interval": 20000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "random-ion_nstar-gto_geo_transfer-reference-s002-b486e8e0117a"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fda2d1dc4820de7256bc80fecfd0c8f9a188de0af14d68e7015e6f48a0937066
+size 354

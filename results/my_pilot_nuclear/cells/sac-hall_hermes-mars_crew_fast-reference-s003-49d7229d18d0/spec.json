@@ -1,15 +1,3 @@
-{
-  "protocol": 3,
-  "propulsion": "hall_hermes",
-  "mission": "mars_crew_fast",
-  "agent": "sac",
-  "cost_model": "reference",
-  "seed": 3,
-  "train_steps": 50000,
-  "eval_episodes": 4,
-  "val_episodes": 3,
-  "eval_interval": 5000,
-  "agent_kwargs": {},
-  "env_config": {},
-  "slug": "sac-hall_hermes-mars_crew_fast-reference-s003-49d7229d18d0"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:80bdd737935852d2b81ca06c4315b25428c49f9d8c8e57241829f2c6c1053a05
+size 347
