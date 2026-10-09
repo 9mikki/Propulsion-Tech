@@ -1,4 +1,4 @@
-name: nuclear_long
+name: nuclear_long2
 description: Nuclear and electric systems on mars_crew_fast, mission's own clock.
 propulsion:
   - nep_brayton
@@ -24,7 +24,7 @@ val_episodes: 2
 report_policy: best
 selection_metric: return
 env:
-  max_episode_steps: 30000
+  max_episode_steps: 5280
 results_dir: results
 workers: 4
 save_telemetry: true
