@@ -1,0 +1,9 @@
+sweep: my_pilot_long_gate
+cells: 32  (16 configurations x 2 seeds)
+training budget: 0 env steps
+evaluation episodes: 192
+  missions     (1): leo_geo_transfer
+  propulsion   (4): hall_hermes, ion_next, ion_nstar, nep_kilopower
+  agents       (4): edelbaum, max_thrust, prograde, random
+  cost_models  (1): reference
+  seeds        (2): 0, 1
