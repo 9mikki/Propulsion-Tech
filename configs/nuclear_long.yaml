@@ -1,0 +1,32 @@
+name: nuclear_long
+description: Nuclear and electric systems on mars_crew_fast, mission's own clock.
+propulsion:
+  - nep_brayton
+  - ntp_nerva
+  - ntp_pewee
+  - hall_hermes
+  - ion_next
+missions:
+  - mars_crew_fast
+agents:
+  - random
+  - max_thrust
+  - prograde
+  - ppo
+  - sac
+cost_models:
+  - reference
+seeds: 4
+train_steps: 50000
+eval_interval: 25000
+eval_episodes: 4
+val_episodes: 2
+report_policy: best
+selection_metric: return
+env:
+  max_episode_steps: 30000
+results_dir: results
+workers: 4
+save_telemetry: true
+exclude: []
+allow_implausible: false

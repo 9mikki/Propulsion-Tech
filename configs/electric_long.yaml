@@ -1,0 +1,35 @@
+name: electric_long
+description: Electric systems, leo_geo_transfer, 1095-day clock, 6 controllers.
+propulsion:
+  - hall_hermes
+  - hall_spt100
+  - ion_next
+  - ion_nstar
+  - nep_kilopower
+missions:
+  - leo_geo_transfer
+agents:
+  - random
+  - max_thrust
+  - prograde
+  - edelbaum
+  - ppo
+  - sac
+cost_models:
+  - reference
+seeds: 4
+train_steps: 50000
+eval_interval: 25000
+eval_episodes: 4
+val_episodes: 2
+report_policy: best
+selection_metric: return
+env:
+  max_episode_steps: 26280
+  mission_kwargs:
+    max_duration_s: 94608000
+results_dir: results
+workers: 4
+save_telemetry: true
+exclude: []
+allow_implausible: false
