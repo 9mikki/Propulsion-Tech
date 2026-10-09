@@ -1,0 +1,110 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+:root {
+  --bg: #070b16;
+  --panel: #12192b;
+  --ink: #f4f7ff;
+  --muted: #9aa6c4;
+  --line: #2a3554;
+  --accent: #56B4E9;
+  --warn: #E69F00;
+  --ok: #009E73;
+  --hot: #D55E00;
+  --pink: #CC79A7;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+body.slide { width: 1600px; height: 900px; overflow: hidden; }
+body.poster { width: 2480px; min-height: 3508px; }
+.stars {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 72%, #cde 50%, transparent 51%),
+    radial-gradient(1px 1px at 63% 22%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 81% 58%, #9cf 50%, transparent 51%),
+    radial-gradient(1px 1px at 47% 41%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 91% 12%, #fff 50%, transparent 51%);
+  opacity: 0.55; pointer-events: none;
+}
+.wrap { position: relative; z-index: 1; padding: 36px 44px 28px; height: 100%; }
+h1 { font-size: 42px; margin: 0 0 6px; letter-spacing: 0.02em; }
+h2 { font-size: 22px; margin: 0; color: var(--accent); font-weight: 700; }
+.kicker { color: var(--warn); font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; }
+.row { display: flex; gap: 18px; }
+.card {
+  background: rgba(18,25,43,0.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px 20px;
+}
+.big { font-size: 64px; font-weight: 800; line-height: 1; color: var(--warn); }
+.big.ok { color: var(--ok); }
+.big.bad { color: var(--hot); }
+.big.blue { color: var(--accent); }
+.label { color: var(--muted); font-size: 15px; margin-top: 8px; line-height: 1.35; }
+.note { color: var(--muted); font-size: 13px; line-height: 1.4; }
+.foot { position: absolute; bottom: 18px; left: 44px; right: 44px;
+  color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; }
+.route { position: relative; height: 210px; margin-top: 8px; }
+.planet { position: absolute; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; }
+.earth { width: 92px; height: 92px; left: 40px; top: 54px; background: #2E6BFF; box-shadow: 0 0 24px #2E6BFF88; }
+.mars { width: 72px; height: 72px; right: 48px; top: 68px; background: #C1440E; box-shadow: 0 0 24px #C1440E88; }
+.path { position: absolute; left: 132px; right: 128px; top: 98px; height: 0;
+  border-top: 3px dashed #56B4E9; }
+.limit {
+  position: absolute; left: 132px; right: 128px; top: 36px;
+  border-top: 3px solid var(--hot);
+}
+.limit span { position: absolute; top: -26px; right: 0; color: var(--hot); font-weight: 800; font-size: 16px; }
+.ship { position: absolute; top: 82px; left: 38%; font-size: 28px; }
+.bar-row { display: grid; grid-template-columns: 56px 210px 1fr 140px; gap: 10px; align-items: center; margin: 8px 0; }
+.bar-track { height: 22px; background: #1c2740; border-radius: 99px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 99px; }
+.rank { font-size: 28px; font-weight: 800; color: var(--warn); }
+.arrow { font-size: 22px; font-weight: 800; }
+.up { color: var(--ok); }
+.down { color: var(--hot); }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.grid2 { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 16px; margin-top: 16px; }
+img.chart { width: 100%; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+
+.bar-row { grid-template-columns: 0 170px 1fr 90px; }
+.lever { display:flex; gap:14px; align-items:flex-start; margin:12px 0; }
+.badge { min-width:72px; text-align:center; padding:8px; border-radius:12px; background:#1c2740; }
+</style></head>
+<body class="slide">
+<div class="stars"></div>
+<div class="wrap">
+  <div class="kicker">Swept parameters in nuclear_long.yaml: propulsion × agent × seed</div>
+  <h1>What actually changes the outcome</h1>
+  <h2>Mission, cost model, and time limit were held fixed. Only hardware, controller, and seed varied.</h2>
+  <div class="row" style="margin-top:18px">
+    <div class="card" style="flex:1.15">
+      <div class="label">Mean progress by propulsion</div>
+      <div class='bar-row'><div></div><div>NEP Brayton</div><div class='bar-track'><div class='bar-fill' style='width:100.0%;background:#56B4E9'></div></div><div>0.217</div></div><div class='bar-row'><div></div><div>NTP NERVA</div><div class='bar-track'><div class='bar-fill' style='width:41.7%;background:#56B4E9'></div></div><div>0.091</div></div><div class='bar-row'><div></div><div>NTP Pewee</div><div class='bar-track'><div class='bar-fill' style='width:25.8%;background:#56B4E9'></div></div><div>0.056</div></div><div class='bar-row'><div></div><div>Hall HERMeS</div><div class='bar-track'><div class='bar-fill' style='width:3.3%;background:#56B4E9'></div></div><div>0.007</div></div><div class='bar-row'><div></div><div>Ion NEXT</div><div class='bar-track'><div class='bar-fill' style='width:0.9%;background:#56B4E9'></div></div><div>0.002</div></div>
+      <div class="label" style="margin-top:10px">Mean progress by controller</div>
+      <div class='bar-row'><div></div><div>SAC</div><div class='bar-track'><div class='bar-fill' style='width:100.0%;background:#E69F00'></div></div><div>0.128</div></div><div class='bar-row'><div></div><div>PPO</div><div class='bar-track'><div class='bar-fill' style='width:96.7%;background:#E69F00'></div></div><div>0.124</div></div><div class='bar-row'><div></div><div>prograde</div><div class='bar-track'><div class='bar-fill' style='width:49.0%;background:#E69F00'></div></div><div>0.063</div></div><div class='bar-row'><div></div><div>max thrust</div><div class='bar-track'><div class='bar-fill' style='width:41.6%;background:#E69F00'></div></div><div>0.053</div></div><div class='bar-row'><div></div><div>random</div><div class='bar-track'><div class='bar-fill' style='width:2.8%;background:#E69F00'></div></div><div>0.004</div></div>
+    </div>
+    <div class="card" style="flex:0.85">
+      <div class="lever">
+        <div class="badge"><div class="arrow up">▲</div>family</div>
+        <div><b>Nuclear vs electric</b><div class="note">Mean progress nuclear 0.1212 vs electric 0.0045 (difference +0.1167). Electric cells all timed out at 220 days.</div></div>
+      </div>
+      <div class="lever">
+        <div class="badge"><div class="arrow up">▲</div>agent</div>
+        <div><b>Learned (PPO/SAC) vs scripted</b><div class="note">Mean progress learned 0.1263 vs scripted 0.0400 (difference +0.0863). Still 0 successful arrivals.</div></div>
+      </div>
+      <div class="lever">
+        <div class="badge"><div class="arrow down">■</div>limit</div>
+        <div><b>220-day crew clock (not swept)</b><div class="note">55 timeouts, 40 out of propellant, 5 hardware failures. Seed is a repeat, not a physics knob (4 repeats per pairing).</div></div>
+      </div>
+      <p class="note">Do not read NTP’s tiny trip times as “faster is better”: mean trip is 0.137 days (NERVA) and 0.117 days (Pewee) because those cells emptied the tanks.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Arrows compare recorded CSV means only</span><span>No $/kg: 0 finite cost_per_kg_delivered values</span></div>
+</div></body></html>

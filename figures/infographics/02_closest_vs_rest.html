@@ -1,0 +1,142 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+:root {
+  --bg: #070b16;
+  --panel: #12192b;
+  --ink: #f4f7ff;
+  --muted: #9aa6c4;
+  --line: #2a3554;
+  --accent: #56B4E9;
+  --warn: #E69F00;
+  --ok: #009E73;
+  --hot: #D55E00;
+  --pink: #CC79A7;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+body.slide { width: 1600px; height: 900px; overflow: hidden; }
+body.poster { width: 2480px; min-height: 3508px; }
+.stars {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 72%, #cde 50%, transparent 51%),
+    radial-gradient(1px 1px at 63% 22%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 81% 58%, #9cf 50%, transparent 51%),
+    radial-gradient(1px 1px at 47% 41%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 91% 12%, #fff 50%, transparent 51%);
+  opacity: 0.55; pointer-events: none;
+}
+.wrap { position: relative; z-index: 1; padding: 36px 44px 28px; height: 100%; }
+h1 { font-size: 42px; margin: 0 0 6px; letter-spacing: 0.02em; }
+h2 { font-size: 22px; margin: 0; color: var(--accent); font-weight: 700; }
+.kicker { color: var(--warn); font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; }
+.row { display: flex; gap: 18px; }
+.card {
+  background: rgba(18,25,43,0.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px 20px;
+}
+.big { font-size: 64px; font-weight: 800; line-height: 1; color: var(--warn); }
+.big.ok { color: var(--ok); }
+.big.bad { color: var(--hot); }
+.big.blue { color: var(--accent); }
+.label { color: var(--muted); font-size: 15px; margin-top: 8px; line-height: 1.35; }
+.note { color: var(--muted); font-size: 13px; line-height: 1.4; }
+.foot { position: absolute; bottom: 18px; left: 44px; right: 44px;
+  color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; }
+.route { position: relative; height: 210px; margin-top: 8px; }
+.planet { position: absolute; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; }
+.earth { width: 92px; height: 92px; left: 40px; top: 54px; background: #2E6BFF; box-shadow: 0 0 24px #2E6BFF88; }
+.mars { width: 72px; height: 72px; right: 48px; top: 68px; background: #C1440E; box-shadow: 0 0 24px #C1440E88; }
+.path { position: absolute; left: 132px; right: 128px; top: 98px; height: 0;
+  border-top: 3px dashed #56B4E9; }
+.limit {
+  position: absolute; left: 132px; right: 128px; top: 36px;
+  border-top: 3px solid var(--hot);
+}
+.limit span { position: absolute; top: -26px; right: 0; color: var(--hot); font-weight: 800; font-size: 16px; }
+.ship { position: absolute; top: 82px; left: 38%; font-size: 28px; }
+.bar-row { display: grid; grid-template-columns: 56px 210px 1fr 140px; gap: 10px; align-items: center; margin: 8px 0; }
+.bar-track { height: 22px; background: #1c2740; border-radius: 99px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 99px; }
+.rank { font-size: 28px; font-weight: 800; color: var(--warn); }
+.arrow { font-size: 22px; font-weight: 800; }
+.up { color: var(--ok); }
+.down { color: var(--hot); }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.grid2 { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 16px; margin-top: 16px; }
+img.chart { width: 100%; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+
+.bar-row { margin: 7px 0; }
+</style></head>
+<body class="slide">
+<div class="stars"></div>
+<div class="wrap">
+  <div class="kicker">Ranked by mean transfer progress — not by trip time</div>
+  <h1>Closest configs vs the rest</h1>
+  <h2>Success rate is 0% for every pairing. Rank is “how far the trajectory got,” not “who landed.”</h2>
+  <div class="grid2">
+    <div class="card"><div class="bar-row">
+              <div class="rank">#1</div>
+              <div><b>NEP Brayton</b><br><span class="note">SAC · n=4 seeds</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:100.00%;background:#E69F00"></div></div>
+              <div style="text-align:right"><b>0.398</b><br><span class="note">progress<br>220.00 days</span></div>
+            </div><div class="bar-row">
+              <div class="rank">#2</div>
+              <div><b>NEP Brayton</b><br><span class="note">PPO · n=4 seeds</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:92.15%;background:#56B4E9"></div></div>
+              <div style="text-align:right"><b>0.366</b><br><span class="note">progress<br>216.74 days</span></div>
+            </div><div class="bar-row">
+              <div class="rank">#3</div>
+              <div><b>NEP Brayton</b><br><span class="note">prograde · n=4 seeds</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:44.22%;background:#009E73"></div></div>
+              <div style="text-align:right"><b>0.176</b><br><span class="note">progress<br>170.71 days</span></div>
+            </div><div class="bar-row">
+              <div class="rank">#4</div>
+              <div><b>NEP Brayton</b><br><span class="note">max thrust · n=4 seeds</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:35.74%;background:#F0E442"></div></div>
+              <div style="text-align:right"><b>0.142</b><br><span class="note">progress<br>220.00 days</span></div>
+            </div><div class="bar-row">
+              <div class="rank">#5</div>
+              <div><b>NTP Pewee</b><br><span class="note">PPO · n=4 seeds</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:31.99%;background:#0072B2"></div></div>
+              <div style="text-align:right"><b>0.127</b><br><span class="note">progress<br>0.17 days</span></div>
+            </div><div class="bar-row">
+              <div class="rank">#6</div>
+              <div><b>NTP NERVA</b><br><span class="note">PPO · n=4 seeds</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:29.84%;background:#D55E00"></div></div>
+              <div style="text-align:right"><b>0.119</b><br><span class="note">progress<br>0.51 days</span></div>
+            </div><div class="bar-row">
+              <div class="rank">#7</div>
+              <div><b>NTP Pewee</b><br><span class="note">SAC · n=4 seeds</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:29.72%;background:#CC79A7"></div></div>
+              <div style="text-align:right"><b>0.118</b><br><span class="note">progress<br>0.12 days</span></div>
+            </div><div class="bar-row">
+              <div class="rank">#8</div>
+              <div><b>NTP NERVA</b><br><span class="note">SAC · n=4 seeds</span></div>
+              <div class="bar-track"><div class="bar-fill" style="width:29.30%;background:#E69F00"></div></div>
+              <div style="text-align:right"><b>0.117</b><br><span class="note">progress<br>0.04 days</span></div>
+            </div></div>
+    <div>
+      <div class="card">
+        <div class="label">Why trip time is not the ranking key</div>
+        <p class="note" style="font-size:16px;color:var(--ink)">NTP NERVA / Pewee have the smallest trip_time_days (hours, not months) because they hit <b>out_of_propellant</b>. That is a failed burn-out, not a fast arrival. They are listed below NEP Brayton on this board.</p>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <div class="big blue">#1</div>
+        <div class="label">Top mean progress: <b>NEP Brayton + SAC</b><br>0.3977 ± 0.0165<br>mean trip 220.0 days (limit 220)</div>
+      </div>
+      <div class="card" style="margin-top:16px">
+        <div class="label">Honest gaps</div>
+        <p class="note" style="font-size:16px;color:var(--ink)">Runner failures: 0. Successful arrivals: 0. $/kg delivered: not defined (0 finite values in 100 rows).</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Source: results/nuclear_long2/results.csv</span><span>25 pairings × 4 seeds = 100 cells</span></div>
+</div></body></html>

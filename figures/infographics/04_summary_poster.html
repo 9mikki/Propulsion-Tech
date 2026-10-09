@@ -1,0 +1,115 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+:root {
+  --bg: #070b16;
+  --panel: #12192b;
+  --ink: #f4f7ff;
+  --muted: #9aa6c4;
+  --line: #2a3554;
+  --accent: #56B4E9;
+  --warn: #E69F00;
+  --ok: #009E73;
+  --hot: #D55E00;
+  --pink: #CC79A7;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+body.slide { width: 1600px; height: 900px; overflow: hidden; }
+body.poster { width: 2480px; min-height: 3508px; }
+.stars {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 72%, #cde 50%, transparent 51%),
+    radial-gradient(1px 1px at 63% 22%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 81% 58%, #9cf 50%, transparent 51%),
+    radial-gradient(1px 1px at 47% 41%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 91% 12%, #fff 50%, transparent 51%);
+  opacity: 0.55; pointer-events: none;
+}
+.wrap { position: relative; z-index: 1; padding: 36px 44px 28px; height: 100%; }
+h1 { font-size: 42px; margin: 0 0 6px; letter-spacing: 0.02em; }
+h2 { font-size: 22px; margin: 0; color: var(--accent); font-weight: 700; }
+.kicker { color: var(--warn); font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; }
+.row { display: flex; gap: 18px; }
+.card {
+  background: rgba(18,25,43,0.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px 20px;
+}
+.big { font-size: 64px; font-weight: 800; line-height: 1; color: var(--warn); }
+.big.ok { color: var(--ok); }
+.big.bad { color: var(--hot); }
+.big.blue { color: var(--accent); }
+.label { color: var(--muted); font-size: 15px; margin-top: 8px; line-height: 1.35; }
+.note { color: var(--muted); font-size: 13px; line-height: 1.4; }
+.foot { position: absolute; bottom: 18px; left: 44px; right: 44px;
+  color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; }
+.route { position: relative; height: 210px; margin-top: 8px; }
+.planet { position: absolute; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; }
+.earth { width: 92px; height: 92px; left: 40px; top: 54px; background: #2E6BFF; box-shadow: 0 0 24px #2E6BFF88; }
+.mars { width: 72px; height: 72px; right: 48px; top: 68px; background: #C1440E; box-shadow: 0 0 24px #C1440E88; }
+.path { position: absolute; left: 132px; right: 128px; top: 98px; height: 0;
+  border-top: 3px dashed #56B4E9; }
+.limit {
+  position: absolute; left: 132px; right: 128px; top: 36px;
+  border-top: 3px solid var(--hot);
+}
+.limit span { position: absolute; top: -26px; right: 0; color: var(--hot); font-weight: 800; font-size: 16px; }
+.ship { position: absolute; top: 82px; left: 38%; font-size: 28px; }
+.bar-row { display: grid; grid-template-columns: 56px 210px 1fr 140px; gap: 10px; align-items: center; margin: 8px 0; }
+.bar-track { height: 22px; background: #1c2740; border-radius: 99px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 99px; }
+.rank { font-size: 28px; font-weight: 800; color: var(--warn); }
+.arrow { font-size: 22px; font-weight: 800; }
+.up { color: var(--ok); }
+.down { color: var(--hot); }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.grid2 { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 16px; margin-top: 16px; }
+img.chart { width: 100%; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+
+body.poster .wrap { padding: 72px 80px 80px; }
+body.poster h1 { font-size: 72px; }
+body.poster .big { font-size: 96px; }
+body.poster .label { font-size: 26px; color: #d5dcf0; }
+body.poster .kicker { font-size: 20px; }
+body.poster .note { font-size: 22px; }
+body.poster .foot { font-size: 20px; bottom: 36px; }
+.poster-kpis { display:grid; grid-template-columns: repeat(4,1fr); gap: 24px; margin: 28px 0 36px; }
+.charts { display:grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.charts img { width: 100%; }
+.wide { grid-column: 1 / -1; }
+</style></head>
+<body class="poster">
+<div class="stars"></div>
+<div class="wrap">
+  <div class="kicker">High-school research poster · AI controllers × spacecraft propulsion · crewed Mars clock</div>
+  <h1>Crewed Mars transfer:<br>100 cells, 0 arrivals</h1>
+  <h2>nuclear_long2 sweep · mars_crew_fast · 5 propulsion systems × 5 controllers × 4 seeds</h2>
+  <div class="poster-kpis">
+    <div class="card"><div class="big bad">0%</div><div class="label">Success rate<br>0/100 cells</div></div>
+    <div class="card"><div class="big">220</div><div class="label">Day crew limit<br>55 timeouts</div></div>
+    <div class="card"><div class="big blue">0.398</div><div class="label">Best mean progress<br>NEP Brayton + SAC</div></div>
+    <div class="card"><div class="big ok">100</div><div class="label">Cells with status=ok<br>runner crashes: 0</div></div>
+  </div>
+  <div class="charts">
+    <div class="card"><div class="label">Transfer progress by pairing</div><img class="chart" src="/workspace/figures/nuclear_long2_progress_heatmap.png"></div>
+    <div class="card"><div class="label">Progress vs controller</div><img class="chart" src="/workspace/figures/nuclear_long2_progress_lines.png"></div>
+    <div class="card wide"><div class="label">How cells ended, by propulsion</div><img class="chart" src="/workspace/figures/nuclear_long2_endings_by_system.png"></div>
+  </div>
+  <div class="card" style="margin-top:28px">
+    <div class="label">What the numbers mean</div>
+    <p class="note" style="font-size:22px;color:var(--ink);line-height:1.45">
+      Progress is a 0–1 score of remaining Δv to the arrival geometry, not a map distance.
+      Payload delivered is 0 kg in every row, so cost per kg is undefined (0 finite values).
+      Shortest clock time is 0.0417 days (NTP NERVA + random) ending as out_of_propellant — not a landing.
+      Hardware failures: 5 cells, all on NEP Brayton.
+    </p>
+  </div>
+  <div class="foot"><span>Data: results/nuclear_long2/results.csv · Config: configs/nuclear_long.yaml</span><span>Charts reused from figures/nuclear_long2_*.png (not edited)</span></div>
+</div></body></html>

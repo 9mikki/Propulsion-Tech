@@ -1,0 +1,107 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+:root {
+  --bg: #070b16;
+  --panel: #12192b;
+  --ink: #f4f7ff;
+  --muted: #9aa6c4;
+  --line: #2a3554;
+  --accent: #56B4E9;
+  --warn: #E69F00;
+  --ok: #009E73;
+  --hot: #D55E00;
+  --pink: #CC79A7;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+body.slide { width: 1600px; height: 900px; overflow: hidden; }
+body.poster { width: 2480px; min-height: 3508px; }
+.stars {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 72%, #cde 50%, transparent 51%),
+    radial-gradient(1px 1px at 63% 22%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 81% 58%, #9cf 50%, transparent 51%),
+    radial-gradient(1px 1px at 47% 41%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 91% 12%, #fff 50%, transparent 51%);
+  opacity: 0.55; pointer-events: none;
+}
+.wrap { position: relative; z-index: 1; padding: 36px 44px 28px; height: 100%; }
+h1 { font-size: 42px; margin: 0 0 6px; letter-spacing: 0.02em; }
+h2 { font-size: 22px; margin: 0; color: var(--accent); font-weight: 700; }
+.kicker { color: var(--warn); font-size: 14px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; }
+.row { display: flex; gap: 18px; }
+.card {
+  background: rgba(18,25,43,0.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px 20px;
+}
+.big { font-size: 64px; font-weight: 800; line-height: 1; color: var(--warn); }
+.big.ok { color: var(--ok); }
+.big.bad { color: var(--hot); }
+.big.blue { color: var(--accent); }
+.label { color: var(--muted); font-size: 15px; margin-top: 8px; line-height: 1.35; }
+.note { color: var(--muted); font-size: 13px; line-height: 1.4; }
+.foot { position: absolute; bottom: 18px; left: 44px; right: 44px;
+  color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; }
+.route { position: relative; height: 210px; margin-top: 8px; }
+.planet { position: absolute; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; }
+.earth { width: 92px; height: 92px; left: 40px; top: 54px; background: #2E6BFF; box-shadow: 0 0 24px #2E6BFF88; }
+.mars { width: 72px; height: 72px; right: 48px; top: 68px; background: #C1440E; box-shadow: 0 0 24px #C1440E88; }
+.path { position: absolute; left: 132px; right: 128px; top: 98px; height: 0;
+  border-top: 3px dashed #56B4E9; }
+.limit {
+  position: absolute; left: 132px; right: 128px; top: 36px;
+  border-top: 3px solid var(--hot);
+}
+.limit span { position: absolute; top: -26px; right: 0; color: var(--hot); font-weight: 800; font-size: 16px; }
+.ship { position: absolute; top: 82px; left: 38%; font-size: 28px; }
+.bar-row { display: grid; grid-template-columns: 56px 210px 1fr 140px; gap: 10px; align-items: center; margin: 8px 0; }
+.bar-track { height: 22px; background: #1c2740; border-radius: 99px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 99px; }
+.rank { font-size: 28px; font-weight: 800; color: var(--warn); }
+.arrow { font-size: 22px; font-weight: 800; }
+.up { color: var(--ok); }
+.down { color: var(--hot); }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.grid2 { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 16px; margin-top: 16px; }
+img.chart { width: 100%; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+</style></head>
+<body class="slide">
+<div class="stars"></div>
+<div class="wrap">
+  <div class="kicker">nuclear_long2 · mars_crew_fast · 100 completed cells</div>
+  <h1>Mars crew transfer at a glance</h1>
+  <h2>Nobody arrived. The 220-day clock stopped every electric and NEP Brayton timeout; NTP stages emptied their tanks in hours.</h2>
+  <div class="row" style="margin-top:22px">
+    <div class="card" style="flex:1">
+      <div class="big bad">0%</div>
+      <div class="label">Success rate<br>0 of 100 cells had success_rate &gt; 0.<br>All 100 cells finished with status=ok (0 runner crashes).</div>
+    </div>
+    <div class="card" style="flex:1">
+      <div class="big blue">0.398</div>
+      <div class="label">Highest mean transfer progress (0–1)<br>NEP Brayton + SAC<br>mean of 4 seeds ± 0.017</div>
+    </div>
+    <div class="card" style="flex:1">
+      <div class="big">220<span style="font-size:28px"> days</span></div>
+      <div class="label">Hard crew time limit in the mission code<br>55 cells ended as timeout on this wall.<br>Cost per kg delivered: missing in 100 / 100 rows (no payload delivered).</div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <div class="route">
+      <div class="planet earth">EARTH</div>
+      <div class="path"></div>
+      <div class="limit"><span>220-day limit — arrival after this is failure</span></div>
+      <div class="ship">◆</div>
+      <div class="planet mars">MARS</div>
+    </div>
+    <div class="note">Shortest elapsed time in the CSV is 0.0417 days (NTP NERVA + random), but that cell ended <b>out_of_propellant</b> — it is not a successful transit. Best single-seed progress is 0.4174 (NEP Brayton + SAC, seed 1), still a timeout at 220.0 days.</div>
+  </div>
+  <div class="foot"><span>Source: results/nuclear_long2/results.csv · config: configs/nuclear_long.yaml</span><span>Payload delivered = 0 kg in every row</span></div>
+</div></body></html>
